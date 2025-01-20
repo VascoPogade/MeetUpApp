@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- text attributes are default for design but are overridden when layout is inflated -->
+    <TextView
+        android:id="@+id/tvMeetupDayTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thursday at 8pm"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvMeetupDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2025-01-05"
+        android:textSize="16sp"
+        android:paddingTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvMeetupStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Open"
+        android:textSize="14sp"
+        android:paddingTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bar: not assigned yet"
+        android:textSize="14sp"
+        android:paddingTop="4dp" />
+
+    <Button
+        android:id="@+id/btnRevoke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Revoke Sign-Up"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

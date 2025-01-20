@@ -1,0 +1,160 @@
+<!-- fragment_interests.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textTitleInterests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Your Interests"
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 📚 Books & Literature -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📚 Books &amp; Literature"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+        <CheckBox android:id="@+id/checkbox_fiction" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fiction"/>
+        <CheckBox android:id="@+id/checkbox_mystery" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mystery"/>
+        <CheckBox android:id="@+id/checkbox_fantasy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fantasy"/>
+        <CheckBox android:id="@+id/checkbox_biographies" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Biographies"/>
+        <CheckBox android:id="@+id/checkbox_scifi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Science Fiction"/>
+
+        <!-- 🎵 Music -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎵 Music"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+        <CheckBox android:id="@+id/checkbox_rock" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rock"/>
+        <CheckBox android:id="@+id/checkbox_jazz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jazz"/>
+        <CheckBox android:id="@+id/checkbox_classical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Classical"/>
+        <CheckBox android:id="@+id/checkbox_pop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pop"/>
+        <CheckBox android:id="@+id/checkbox_electronic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Electronic"/>
+
+        <!-- 🎬 Movies & TV Shows -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎬 Movies &amp; TV Shows"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+        <CheckBox android:id="@+id/checkbox_action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Action"/>
+        <CheckBox android:id="@+id/checkbox_comedy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Comedy"/>
+        <CheckBox android:id="@+id/checkbox_drama" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Drama"/>
+        <CheckBox android:id="@+id/checkbox_documentaries" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Documentaries"/>
+        <CheckBox android:id="@+id/checkbox_anime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Anime"/>
+
+        <!-- 🏋️ Fitness & Sports -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🏋️ Fitness &amp; Sports"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+        <CheckBox android:id="@+id/checkbox_yoga" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Yoga"/>
+        <CheckBox android:id="@+id/checkbox_running" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Running"/>
+        <CheckBox android:id="@+id/checkbox_soccer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Soccer"/>
+        <CheckBox android:id="@+id/checkbox_swimming" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Swimming"/>
+        <CheckBox android:id="@+id/checkbox_tennis" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tennis"/>
+
+        <!-- 🍜 Food & Drinks -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🍜 Food &amp; Drinks"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+        <CheckBox android:id="@+id/checkbox_vegan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vegan Cuisine"/>
+        <CheckBox android:id="@+id/checkbox_streetfood" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Street Food"/>
+        <CheckBox android:id="@+id/checkbox_baking" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Baking"/>
+        <CheckBox android:id="@+id/checkbox_wine" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wine"/>
+        <CheckBox android:id="@+id/checkbox_coffee" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Coffee"/>
+
+        <!-- 🌍 Travel & Adventure -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌍 Travel &amp; Adventure"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+        <CheckBox android:id="@+id/checkbox_backpacking" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Backpacking"/>
+        <CheckBox android:id="@+id/checkbox_roadtrips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Roadtrips"/>
+        <CheckBox android:id="@+id/checkbox_camping" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Camping"/>
+        <CheckBox android:id="@+id/checkbox_culture" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Culture"/>
+        <CheckBox android:id="@+id/checkbox_hiking" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hiking"/>
+
+        <!-- 🎨 Arts & Crafts -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎨 Arts &amp; Crafts"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+        <CheckBox android:id="@+id/checkbox_painting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Painting"/>
+        <CheckBox android:id="@+id/checkbox_photography" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Photography"/>
+        <CheckBox android:id="@+id/checkbox_pottery" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pottery"/>
+        <CheckBox android:id="@+id/checkbox_diy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DIY Projects"/>
+        <CheckBox android:id="@+id/checkbox_crochet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Crochet"/>
+
+        <!-- 🎮 Gaming -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎮 Gaming"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+        <CheckBox android:id="@+id/checkbox_pc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PC Gaming"/>
+        <CheckBox android:id="@+id/checkbox_console" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Console Gaming"/>
+        <CheckBox android:id="@+id/checkbox_mobile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mobile Gaming"/>
+        <CheckBox android:id="@+id/checkbox_boardgames" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Boardgames"/>
+        <CheckBox android:id="@+id/checkbox_esports" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="E-Sports"/>
+
+        <!-- 🧘 Wellness & Self-Care -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🧘 Wellness &amp; Self-Care"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+        <CheckBox android:id="@+id/checkbox_meditation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Meditation"/>
+        <CheckBox android:id="@+id/checkbox_mentalhealth" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mental Health"/>
+        <CheckBox android:id="@+id/checkbox_spirituality" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Spirituality"/>
+        <CheckBox android:id="@+id/checkbox_minimalism" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Minimalism"/>
+        <CheckBox android:id="@+id/checkbox_healthyeating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Healthy Eating"/>
+
+        <!-- 💼 Professional Development -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💼 Professional Development"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+        <CheckBox android:id="@+id/checkbox_startups" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Startups"/>
+        <CheckBox android:id="@+id/checkbox_networking" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Networking"/>
+        <CheckBox android:id="@+id/checkbox_publicspeaking" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Public Speaking"/>
+        <CheckBox android:id="@+id/checkbox_coding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Coding"/>
+        <CheckBox android:id="@+id/checkbox_marketing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Digital Marketing"/>
+
+        <!-- Finish Button -->
+        <Button
+            android:id="@+id/buttonFinish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finish"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".fragments.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewWelcome"
+            android:text="Welcome!! Which MeetUp would you like to join?"
+            android:textSize="18sp"
+            android:layout_marginBottom="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"/>
+
+        <!-- Meetup Buttons -->
+        <Button
+            android:id="@+id/buttonThursday8pm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Join Thursday Meetup at 8pm"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/buttonFriday8pm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Join Friday Meetup at 8pm"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/buttonSunday2pm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Join Sunday Meetup at 2pm"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Logout Button -->
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:backgroundTint="@color/design_default_color_error"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</ScrollView>
