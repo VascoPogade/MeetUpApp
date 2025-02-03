@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel;
 import java.util.List;
 
 public class UserViewModel extends ViewModel {
-    // LiveData objects (in case changes want to be observed in upscaled version)
+    // LiveData objects
     private final MutableLiveData<String> name = new MutableLiveData<>();
     private final MutableLiveData<Integer> age = new MutableLiveData<>();
     private final MutableLiveData<List<String>> interests = new MutableLiveData<>();

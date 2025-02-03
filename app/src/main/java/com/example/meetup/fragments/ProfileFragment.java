@@ -78,12 +78,16 @@ public class ProfileFragment extends Fragment {
      * Loads the user's profile data from Firestore and updates the UI.
      */
     private void loadUserProfile() {
+        // Get the current user's ID or null if not authenticated
         String uid = mAuth.getCurrentUser() != null ? mAuth.getCurrentUser().getUid() : null;
+
+        // If user is not authenticated, show a toast and return
         if (uid == null) {
             Toast.makeText(getContext(), "User not authenticated.", Toast.LENGTH_SHORT).show();
             return;
         }
 
+        // Fetch user profile from Firestore
         db.collection("users").document(uid)
                 .get()
                 .addOnSuccessListener(documentSnapshot -> {

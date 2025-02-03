@@ -40,7 +40,7 @@ public class HomeFragment extends Fragment {
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
     private Button buttonThursday, buttonSunday, buttonFriday, buttonLogout;
-    // Group size for each Meetup
+    // Group size for each Meetup group
     private final int GROUP_SIZE = 6;
     private UserViewModel userViewModel;
 

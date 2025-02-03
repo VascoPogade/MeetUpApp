@@ -36,10 +36,12 @@ public class NameAgePictureFragment extends Fragment {
         // Initialize ViewModel
         userViewModel = new ViewModelProvider(requireActivity()).get(UserViewModel.class);
 
+        // Initialize views
         EditText editName = view.findViewById(R.id.editName);
         EditText editAge  = view.findViewById(R.id.editAge);
         Button nextButton = view.findViewById(R.id.buttonNext);
 
+        // Set click listener to navigate to InterestsFragment and save user data
         nextButton.setOnClickListener(v -> {
             String userName = editName.getText().toString().trim();
             String userAgeStr = editAge.getText().toString().trim();

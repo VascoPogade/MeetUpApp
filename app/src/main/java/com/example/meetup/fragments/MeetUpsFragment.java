@@ -60,19 +60,24 @@ public class MeetUpsFragment extends Fragment implements OnRevokeClickListener {
         recyclerViewUpcoming = view.findViewById(R.id.recyclerViewUpcoming);
         recyclerViewPast = view.findViewById(R.id.recyclerViewPast);
 
+        // Set layout manager for RecyclerView
         recyclerViewUpcoming.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerViewPast.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        // Disable nested scrolling for RecyclerViews so that they don't interfere with the parent ScrollView
         recyclerViewUpcoming.setNestedScrollingEnabled(false);
         recyclerViewPast.setNestedScrollingEnabled(false);
 
+        // Initialize lists
         upcomingList = new ArrayList<>();
         pastList = new ArrayList<>();
 
+        // Initialize adapters
         String currentUserId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         upcomingAdapter = new MeetupAdapter(upcomingList, this, currentUserId);
         pastAdapter = new MeetupAdapter(pastList, this, currentUserId);
 
+        // Set adapters to RecyclerViews
         recyclerViewUpcoming.setAdapter(upcomingAdapter);
         recyclerViewPast.setAdapter(pastAdapter);
 
@@ -80,7 +85,6 @@ public class MeetUpsFragment extends Fragment implements OnRevokeClickListener {
         //used for specification of the current user
         mAuth = FirebaseAuth.getInstance();
 
-        //fetchMeetups();
         fetchUserMeetups();
     }
 
@@ -105,6 +109,7 @@ public class MeetUpsFragment extends Fragment implements OnRevokeClickListener {
                         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                         Date currentDate = new Date();
 
+                        // Add meetups to the appropriate list based on date
                         for (QueryDocumentSnapshot document : task.getResult()) {
                             Meetup meetup = document.toObject(Meetup.class);
                             try {
@@ -122,6 +127,7 @@ public class MeetUpsFragment extends Fragment implements OnRevokeClickListener {
                                 e.printStackTrace();
                             }
                         }
+                        // Notify adapters of the data change
                         upcomingAdapter.notifyDataSetChanged();
                         pastAdapter.notifyDataSetChanged();
                     } else {
@@ -140,13 +146,15 @@ public class MeetUpsFragment extends Fragment implements OnRevokeClickListener {
         db.collection("meetups").document(meetupId)
                 .update("participants", FieldValue.arrayRemove(userId))
                 .addOnSuccessListener(aVoid -> {
-                    // Optionally, also remove from 'signups' subcollection
+                    // Remove user from 'signups' subcollection in the meetup document
                     db.collection("meetups").document(meetupId)
                             .collection("signups").document(userId)
                             .delete()
                             .addOnSuccessListener(unused -> {
                                 Toast.makeText(getContext(), "Successfully revoked sign-up.", Toast.LENGTH_SHORT).show();
                                 fetchUserMeetups();  // Refresh lists after revocation
+
+                                // Remove user from 'members' array in all groups of this meetup
                                 db.collection("meetups").document(meetupId)
                                         .collection("groups")
                                         .whereArrayContains("members", userId)
@@ -154,7 +162,6 @@ public class MeetUpsFragment extends Fragment implements OnRevokeClickListener {
                                         .addOnSuccessListener(groupsSnapshot -> {
                                             for (DocumentSnapshot groupDoc : groupsSnapshot.getDocuments()) {
                                                 groupDoc.getReference().update("members", FieldValue.arrayRemove(userId));
-                                                // Optionally recalculate common interests for this group if needed
                                             }
                                         });
                             })

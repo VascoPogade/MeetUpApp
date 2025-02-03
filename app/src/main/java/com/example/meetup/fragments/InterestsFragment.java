@@ -112,14 +112,17 @@ public class InterestsFragment extends Fragment {
                 }
             }
 
+            // Check if at least 8 interests are selected
             if (selectedInterests.size() < 8) {
                 Toast.makeText(getContext(), "Please select at least 8 interests", Toast.LENGTH_SHORT).show();
                 return;
             }
 
+            // Save the selected interests to the ViewModel
             userViewModel.setInterests(selectedInterests);
             Toast.makeText(getContext(), "Interests saved successfully!", Toast.LENGTH_SHORT).show();
 
+            // Check if the activity is ProfileActivity and save the profile
             if (getActivity() instanceof com.example.meetup.activities.ProfileActivity) {
                 ((com.example.meetup.activities.ProfileActivity) getActivity()).checkAndSaveProfile();
             }
